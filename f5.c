@@ -38,53 +38,27 @@ int main()
 int fase(int etapa, int alvo)
 {
 	int numero = -1;
-
-	printf("[Etapa %d de 5] Digite o numero: ", 1+etapa);
+	printf("[Etapa %d de 5] Digite o numero: ", 1 + etapa);
 	scanf("%d", &numero);
+	if (numero != alvo) return 0;
+	printf("Voce passou pela etapa %d! Continue...\n\n", 1 + etapa);
+	return 1;
+};
 
-	/*while (numero != alvo)
+int fase1(int etapa, int alvo)
+{
+	int numero = -1;
+	printf("[Etapa %d de 5] Digite o numero: ", 1 + etapa);
+	scanf("%d", &numero);
+	while (numero != alvo)
 	{
 		printf("\nVoce digitou um numero incorreto!\n");
 		printf("Tente novamente\n\n");
 		printf("[Etapa %d de 5] Digite o numero: ", etapa);
 		scanf("%d", &numero);
-	};*/
+	};
 	if (numero != alvo) return 0;
-	printf("Voce passou pela etapa %d! Continue...\n\n", 1+etapa);
-	return 1; 
+	printf("Voce passou pela etapa %d! Continue...\n\n", 1 + etapa);
+	return 1;
 };
 
-int teste()
-{
-	//typedef struct fila TFila;
-
-	//TFila* inicializa(void);
-	//TFila* insere(TFila * f, int elem);
-	//int    retira(TFila * f);
-	//void   libera(TFila * f);
-	//int    vazia(TFila * f);
-
-	//TFila* PrimeiraFila = inicializa();
-	//TFila* SegundaFila = inicializa();
-
-	//for (int i = 0; i < 10; i += 1) insere(PrimeiraFila, i);
-	//while (vazia(PrimeiraFila) == 0)
-	//	insere(SegundaFila, retira(PrimeiraFila));
-};
-
-int soma()
-{
-	int quantidade;
-	printf("digite a quantidade do produto A:");
-	scanf("%d", &quantidade);
-	int total = quantidade * 4;
-	printf("digite a quantidade do produto B:");
-	scanf("%d", &quantidade);
-	total = total + quantidade * 3;
-	printf("digite a quantidade do produto C:");
-	scanf("%d", &quantidade);
-	total = total + quantidade * 5;
-	printf("o resultado da venda eh %d", total);
-
-	return 0;
-}
